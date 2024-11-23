@@ -40,8 +40,9 @@ git clone [repository-url]
 # OR
 # Download and extract the ZIP file from the repository
 ```
+2. Move into FINALpipeline directory
 
-2. Install dependencies:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
