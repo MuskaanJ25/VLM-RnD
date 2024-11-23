@@ -19,7 +19,7 @@ This pipeline analyzes both images and their corresponding captions to assess ho
 
 ### Output
 - Numerical score representing caption accuracy in cultural context
-- Detailed analysis of identified cultural elements
+- Detailed analysis of identified cultural elements (can be shown by printing each component of pipeline results)
 
 ## Installation
 
@@ -30,6 +30,7 @@ This pipeline analyzes both images and their corresponding captions to assess ho
 ```bash
 python -m spacy download en_core_web_sm
 ```
+
 
 ### Setup
 
@@ -60,9 +61,11 @@ python main.py
 
 The main function accepts image path and caption as arguments:
 ```python
-from main import main
-
-score = main(image_path="path/to/image", caption="image caption")
+# ...
+if __name__ == "__main__":
+   # ...
+   score = main(image_path="path/to/image", caption="image caption")
+   # ...
 ```
 
 ## Pipeline Architecture
@@ -71,13 +74,11 @@ score = main(image_path="path/to/image", caption="image caption")
 
 1. **Image Analysis Module**
    - Processes visual elements
-   - Identifies cultural markers
-   - Performs object detection
+   - Identifies cultural markers accord to each pipeline component
 
 2. **Caption Analysis Module**
    - Natural Language Processing
    - Cultural context evaluation
-   - Semantic analysis
 
 3. **Correlation Engine**
    - Matches visual elements with textual descriptions
@@ -117,7 +118,7 @@ Weight parameters and other configurations can be adjusted in the config files b
 
 - Geo-tagging functionality is currently not implemented
 - Weight parameters may need further tuning
-- Limited to pre-defined cultural elements (can be extended)
+- Limited to pre-defined cultural symbols (can be extended)
 
 ## Future Improvements
 
@@ -126,14 +127,4 @@ Weight parameters and other configurations can be adjusted in the config files b
 - Extended dataset support
 - Geo-tagging implementation
 
-## Contributing
 
-Contributions to improve the pipeline are welcome. Please follow the standard pull request process.
-
-## License
-
-[Specify your license here]
-
-## Contact
-
-[Your contact information or project maintenance details]
