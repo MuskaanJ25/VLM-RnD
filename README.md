@@ -1,4 +1,132 @@
-# VLM-RnD
-VLM (R&amp;D 2024) 
+# Indian Cultural Elements Evaluation Pipeline
 
-Usage Instructions -
+A comprehensive pipeline for evaluating the accuracy of Vision-Language Model (VLM) generated captions in representing Indian cultural elements within images.
+
+## Overview
+
+This pipeline analyzes both images and their corresponding captions to assess how accurately the captions represent Indian cultural elements present in the images. The system provides a numerical score indicating the caption's effectiveness in capturing culturally significant details.
+
+### Input
+- Image file
+- Corresponding VLM-generated caption
+
+### Output
+- Numerical score representing caption accuracy in cultural context
+- Detailed analysis of identified cultural elements
+
+## Installation
+
+### Prerequisites
+
+1. Python 3.7+
+2. SpaCy English language model:
+```bash
+python -m spacy download en_core_web_sm
+```
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+# OR
+# Download and extract the ZIP file from the repository
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Note: Additional dependencies may need to be installed as you encounter them. The system will indicate missing packages through error messages.
+
+## Usage
+
+### Basic Usage
+
+Run the main script:
+```python
+python main.py
+```
+
+### Custom Implementation
+
+The main function accepts image path and caption as arguments:
+```python
+from main import main
+
+score = main(image_path="path/to/image", caption="image caption")
+```
+
+## Pipeline Architecture
+
+### Components
+
+1. **Image Analysis Module**
+   - Processes visual elements
+   - Identifies cultural markers
+   - Performs object detection
+
+2. **Caption Analysis Module**
+   - Natural Language Processing
+   - Cultural context evaluation
+   - Semantic analysis
+
+3. **Correlation Engine**
+   - Matches visual elements with textual descriptions
+   - Calculates accuracy scores
+   - Generates detailed reports
+
+## Technical Details
+
+### Processing Flow
+
+1. Image input processing
+2. Caption text analysis
+3. Parallel processing of visual and textual elements
+4. Correlation analysis
+5. Score generation
+
+### Implementation Notes
+
+- Modular architecture for easy maintenance
+- Extensible design for adding new cultural elements
+- Configurable weight parameters for scoring
+- Cache support for YOLO models and NLP toolkits
+
+## Current Features
+
+- Cultural element detection
+- Semantic accuracy scoring
+- Multi-modal analysis
+- Configurable parameters
+- Sample test cases included
+
+## Configuration
+
+Weight parameters and other configurations can be adjusted in the config files based on specific requirements.
+
+## Limitations
+
+- Geo-tagging functionality is currently not implemented
+- Weight parameters may need further tuning
+- Limited to pre-defined cultural elements (can be extended)
+
+## Future Improvements
+
+- Addition of more cultural symbols
+- Enhanced weight parameter optimization
+- Extended dataset support
+- Geo-tagging implementation
+
+## Contributing
+
+Contributions to improve the pipeline are welcome. Please follow the standard pull request process.
+
+## License
+
+[Specify your license here]
+
+## Contact
+
+[Your contact information or project maintenance details]
