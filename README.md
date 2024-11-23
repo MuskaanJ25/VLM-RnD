@@ -1,6 +1,13 @@
-# Indian Cultural Elements Evaluation Pipeline
+# Indicness Metric for Visual Language Model Captions (Pipeline Model)
 
-A comprehensive pipeline for evaluating the accuracy of Vision-Language Model (VLM) generated captions in representing Indian cultural elements within images.
+## Introduction
+
+This report details the technical implementation of the Indicness evaluation metric for VLM-generated
+captions of images. This metric is realized through a pipeline model, a sequence of actions designed to
+evaluate the caption and measure its "Indian-ness". The pipeline integrates multiple computer vision and
+natural language processing techniques to analyze the image and its caption, assessing various cultural
+and contextual aspects to determine the relevance and representation of Indian elements in the generated
+text for an image.
 
 ## Overview
 
